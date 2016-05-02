@@ -1,5 +1,7 @@
 package main;
 
+import java.util.Arrays;
+
 import main.interfaces.ITransformacion;
 
 public class ContenedorNumeros {
@@ -44,5 +46,11 @@ public class ContenedorNumeros {
 		}
 		
 		return suma; 
+	}
+	
+	//sobreescribo el toString de la clase
+	@Override
+	public String toString(){
+		return "ContenedorNumero [ "+Arrays.toString(numeros)+" ]"; 
 	}
 }

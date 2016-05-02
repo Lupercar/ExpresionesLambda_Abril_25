@@ -12,8 +12,11 @@ public class App {
 		cont.setNumero(1, 2.0);
 		cont.setNumero(3, 3.0);
 
+//		ver contenido de una array
+		System.out.println(cont);
+		
 //		hacemos la suma mediante la interfaz funcional tiene un parametro le
 //		llamo v al parametro -> cada elemento lo multiplico por 2 y lo sumo
-		System.out.println(cont.suma(v -> v*2));
+		System.out.println("La suma del array vale: "+cont.suma(v -> v*2));
 	}
 }
