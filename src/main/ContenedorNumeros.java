@@ -2,6 +2,8 @@ package main;
 
 import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
 
+import main.interfaces.ITransformacion;
+
 public class ContenedorNumeros {
 	// Hacemos que almacene un Array de Numeros
 	private double[] numeros;
