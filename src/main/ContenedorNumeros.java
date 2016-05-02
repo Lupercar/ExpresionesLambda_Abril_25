@@ -1,7 +1,5 @@
 package main;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
-
 import main.interfaces.ITransformacion;
 
 public class ContenedorNumeros {
@@ -15,7 +13,7 @@ public class ContenedorNumeros {
 			numeros = new double[numeroElementos];
 	}
 
-	// metodo que nos devuelve el contenido de un numero en una cierta posicion
+//	metodo que nos devuelve el contenido de un numero en una cierta posicion
 	public double getNumero(int posicion) {
 		double retorno = 0.0;
 		if ((posicion >= 0) && posicion < numeros.length)
@@ -35,7 +33,16 @@ public class ContenedorNumeros {
 	}
 	
 	public double suma(ITransformacion transformacion){
-		//A cada elemento le aplica una cierta transformacion y luego acumula el valor
+//		A cada elemento le aplica una cierta transformacion y luego acumula el valor
+		double suma = 0.0;
 		
+//		recorremos el array con un bucle for extendido
+		for(double n : numeros){
+//			por cada elemento del array este valor n lo transformamos
+			n = transformacion.transforma(n); 
+			suma += n; //a la variable local suma le sumo n
+		}
+		
+		return suma; 
 	}
 }
